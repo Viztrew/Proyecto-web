@@ -1,0 +1,11 @@
+@import '/src/styles/styles.scss';
+.row{
+    width: 400px;
+}
+
+@media (max-width:1000px) {
+    .col{
+        flex: 50%;
+        max-width: 50%;
+        }
+    }

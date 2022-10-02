@@ -1,0 +1,9 @@
+/* Importar archivos Bootstrap SCSS. */
+@import 'bootstrap/scss/bootstrap';
+
+// Importar carpetas de estilo
+@import './0-base/base-dir';
+@import './1-page/page-dir';
+
+
+

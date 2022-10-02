@@ -1,0 +1,28 @@
+@import '/src/styles/0-base/base-dir';
+.page-preset{
+    background-color: $bg-color;
+}
+
+.content{
+    background-color: rgb(68, 68, 156);
+    width: 1300px;
+    height: 1500px;   
+    display: block;
+}
+
+.margin{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.recipe-img{
+    width: 300px;
+    height: 300px;
+}
+
+.title{
+    text-align: center;
+    padding: 32px;
+}

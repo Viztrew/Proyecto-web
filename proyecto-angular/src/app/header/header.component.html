@@ -1,0 +1,54 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="#">
+          <img class="logo" src="./assets/logo1.png" alt="logo">
+          logo
+        </a>
+      </div>
+      <div class="col">
+        <a href="#">
+          <h1 class="text-white">Titulo</h1>
+        </a>
+      </div>
+      <div class="col" >
+        <button class="btn btn-outline-custom-color text-white" [routerLink]="['/login']">Log-in</button>
+        <button class="btn btn-outline-custom-color text-white">Sign-in</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<nav class="navbar">
+  <div class="container">
+    <section style="float:left">
+        <form class="d-flex mx-auto" role="search" >
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-custom-color text-white" type="submit">Buscar</button>
+        </form>
+      </section>
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills custom-color" style="float:right"  orientation="horizontal">
+        
+          <li ngbNavItem="first">
+            <a ngbNavLink [routerLink]="['']" class="text-white">Home</a>
+            <ng-template ngbNavContent>
+            </ng-template>
+          </li>
+                
+          <li ngbNavItem="second">
+            <a ngbNavLink [routerLink]="['/recipe']" class="text-white">Receta</a>
+            <ng-template ngbNavContent>
+            </ng-template>
+          </li>
+                
+          <li ngbNavItem="third">
+            <a ngbNavLink [routerLink]="['/contact']" class="text-white">Contacto</a>
+            <ng-template ngbNavContent>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+</nav> 

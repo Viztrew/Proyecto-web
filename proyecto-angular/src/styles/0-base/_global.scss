@@ -1,0 +1,50 @@
+// Colores del proyecto
+$header-color:rgba(35, 0, 65, 0.829);
+$footer-color: rgba(35, 0, 65, 0.829);
+$nav-color: rgba(35, 0, 65, 0.829);
+$bg-color: rgba(222, 166, 255, 0.37);
+$btn-color: rgb(195, 0, 255);
+
+// Importar color a boostrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$custom-colors: (
+  "custom-color": $btn-color
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
+
+// icons
+// Menú hamburguesa
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+
+// Estrella
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+
+.fill{
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.not-fill{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+// logo
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

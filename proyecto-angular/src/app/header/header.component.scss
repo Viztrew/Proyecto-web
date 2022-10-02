@@ -1,0 +1,28 @@
+@import '/src/styles/styles.scss';
+header{
+    background-color: $header-color;
+    
+    h1{
+        text-align: center;
+        text-decoration: none;
+    }
+    button{
+        float: right;
+        justify-content: center;
+        margin: 3px;
+    }
+}
+
+.navbar{
+    background-color: $nav-color;
+    position: sticky;
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+
