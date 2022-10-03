@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   validacion(){
-    console.log(this.login.get("nombre")?.value);
     this.loginMsg=true;
   }
 }
