@@ -1,0 +1,61 @@
+<div class="container-fluid" id="contact">
+    <div *ngIf="!contactFormMsg">
+        <h5 class="title">Contacto</h5>
+        <form  [formGroup]="contactForm" (ngSubmit)="validacion()" novalidate >
+            <div class="row g-2 margin">
+                <div class="col-6">
+                    <label for="nameInput" class="form-label">Nombre*</label>
+                    <input formControlName="name" type="text" class="form-control" id="name" placeholder="Nombre" >
+                    <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty ||  contactForm.controls['name'].touched)" class="alert alert-danger">
+                        <div *ngIf="contactForm.controls['name'].hasError('required')">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="subjectInput" class="form-label">Asunto*</label>
+                    <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Asunto" >
+                    <div *ngIf="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].dirty ||  contactForm.controls['subject'].touched)" class="alert alert-danger">
+                        <div *ngIf="contactForm.controls['subject'].hasError('required')">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="emailInput" class="form-label">E-mail*</label>
+                    <input formControlName="email" type="email" class="form-control" id="email" placeholder="Example@mail.com" >
+                    <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty ||  contactForm.controls['email'].touched)" class="alert alert-danger">
+                        <div *ngIf="contactForm.controls['email'].hasError('required')">
+                            Campo obligatorio
+                        </div>
+                        <div *ngIf="contactForm.controls['email'].hasError('email')">
+                            Formato email incorrecto
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="commentsInput" class="form-label">Comentarios*</label>
+                    <textarea formControlName="comments" class="form-control" id="comments" cols="100" rows="10" ></textarea>
+                    <div *ngIf="contactForm.controls['comments'].invalid && (contactForm.controls['comments'].dirty ||  contactForm.controls['comments'].touched)" class="alert alert-danger">
+                        <div *ngIf="contactForm.controls['comments'].hasError('required')">
+                            Campo obligatorio
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>(*): Campos obligatorios</label>
+                </div>
+                <div class="col-12 mb-3">
+                    <input formControlName="newsletter"  type="checkbox" value ="true"class="form-check-input" id="checkNewsletter">
+                    <label for="checkNewsletter" class="form-check-label">Suscribirse a newsletter</label>
+                </div>
+                <div class="col-2 mx-auto">
+                    <button type="submit" [disabled]="!contactForm.valid" class="btn btn-primary">Enviar</button> 
+                </div>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="contactFormMsg" class="alert alert-success">
+        <h1>Mensaje enviado</h1>
+    </div>
+</div>

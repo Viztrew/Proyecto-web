@@ -1,0 +1,97 @@
+<!-- Impresion de las recetas en página principal mediante un json-->
+<div class="container-fluid text-center card-style">
+  
+    <div class="row" >
+      <div class="col">
+        <div class="container">
+          <img src="assets/img/{{recipe.img}}" width="100%" height="auto" class="img-fluid" alt="{{recipe.name}}">
+          
+          <!-- overlay de la receta (al pasar el mouse)-->
+          <div class="overlay">
+
+            <span class="material-symbols-outlined not-fill favorite-overlay"> 
+              favorite
+            </span>
+            <a [routerLink]="['/recipe']" class="icon">
+              <span class="material-symbols-outlined arrow-overlay">
+                arrow_forward_ios
+              </span>
+              <span class="text-overlay"><h6>Ver receta</h6></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <hr class="border border-dark border-1 opacity-50">
+    <div class="row" >
+      <div class="col">
+        <h3>{{recipe.name}}</h3> 
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-1 icon-recipe">
+        <span class="material-symbols-outlined fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Valoración">
+          star
+        </span>
+      </div>
+      <div class="col-2 number">
+        <h5>{{recipe.rating}}</h5>
+      </div>
+          
+      <div class="col-1 icon-recipe">
+        <span class="material-symbols-outlined fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Monto aproximado">
+          attach_money
+        </span>
+      </div>
+
+      <div class="col-2 number">
+          <h5>{{recipe.value}}</h5>
+      </div>
+      
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-1 icon-recipe"> 
+        <span class="material-symbols-outlined fill" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Tiempo de preparación">
+          timer
+        </span>
+      </div>
+
+      <div class="col-2 number">
+        <h5>{{recipe.time}}'</h5>
+      </div>
+          
+      <div class="col-1 icon-recipe">
+        <span class="material-symbols-outlined fill"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Porciones">
+          person
+        </span>
+      </div>
+
+      <div class="col-2 number">
+          <h5>{{recipe.portion}}</h5>
+      </div>
+      
+    </div>
+    
+    <div class="row" >
+      <div class="col">
+        <h5>{{recipe.description}}</h5>
+      </div>
+    </div>
+</div>
+
+<!-- valores del json
+        "id":"2",
+        "name":"Hamburguesa Vegana",
+        "img":"hamburguesa.jpg",
+        "type":"Plato Principal",
+        "rating":"4",
+        "portion":"1",
+        "value":"2500",
+        "calories":"200",
+        "time":"15",
+        "difficulty":"Baja",
+        "description":"Hamburguesa con carne de soya y verduras"
+-->

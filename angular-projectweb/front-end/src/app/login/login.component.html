@@ -1,0 +1,40 @@
+<div class="container-fluid" id="login">
+    <div *ngIf="!loginMsg">
+        <h5 class="title">Login</h5>
+        <form [formGroup]="login" (ngSubmit)="validacion()" novalidate>
+            <div class="row g-2 margin">
+                <div class="col-12">
+                    <label for="emailInput" class="form-label">E-mail</label>
+                    <input formControlName="email" type="email" class="form-control" id="inputEmail" placeholder="Example@mail.com">
+                    <div *ngIf="login.controls['email'].invalid && (login.controls['email'].dirty ||  login.controls['email'].touched)" class="alert alert-danger">
+                        <div *ngIf="login.controls['email'].hasError('required')">
+                            Campo obligatorio
+                        </div>
+                        <div *ngIf="login.controls['email'].hasError('email')">
+                            Formato email incorrecto
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="inputPasword" class="form-label">Constraseña</label>
+                    <input formControlName="password" type="password" class="form-control" id="inputPasword">
+                    <div *ngIf="login.controls['password'].invalid && (login.controls['password'].dirty ||  login.controls['password'].touched)" class="alert alert-danger">
+                        <div *ngIf="login.controls['password'].hasError('required')">
+                            Ingrese contraseña
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <input type="checkbox" class="form-check-input" id="checkRememberMe">
+                    <label for="checkRememberMe" class="form-check-label">Recordarme</label>
+                </div>
+                <div class="col-2 mx-auto">
+                    <button type="submit" [disabled]="!login.valid" class="btn btn-primary ">Ingresar</button> 
+                </div>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="loginMsg" class="alert alert-success">
+        <h1>Sesión iniciada</h1>
+    </div>
+</div>

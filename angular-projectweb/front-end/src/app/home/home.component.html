@@ -1,0 +1,41 @@
+
+<body class="page-preset">
+
+  <!-- Carrusel que muestra recetas que pueden ser accedidas haciendo click en la imagen (hipervinculo)-->
+    <div class="container-fluid carrousel-style">
+      <ngb-carousel>
+          <ng-template ngbSlide *ngFor="let recipe of Recipes" >
+            <div class="picsum-img-wrapper" >
+              <a href="/recipe">
+                <img src="assets/img/{{recipe.img}}" width="100%" class="img-fluid" alt="{{recipe.name}}">
+              </a>
+            
+            </div>
+            <div class="carousel-caption text-white carrousel-text-color">
+              <h3>{{recipe.name}}</h3>
+              <p>{{recipe.description}}</p>
+            </div>
+          </ng-template>
+          
+        </ngb-carousel>
+      </div>
+
+
+      <hr class="border border-dark border-1 opacity-50">
+      <div class="title">
+        <h1>Recetas Disponibles</h1>
+      </div>
+      <hr class="border border-dark border-1 opacity-50">
+
+      <!-- Card de recetas desde json -->
+      <div class="container">
+        <div class="row" id="ads">
+            <div class="col-xs-6 col-md-6 col-xl-4" *ngFor="let recipe of Recipes">
+              <app-recipe-card [recipe]="recipe"></app-recipe-card>
+          </div>
+        </div> 
+      </div>
+
+     
+
+      

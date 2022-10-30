@@ -1,0 +1,12 @@
+@import "src/styles.scss";
+footer{
+    background-color: $footer-color;
+    height: 100px;
+    clear: both;
+    margin-bottom: 0;
+}
+
+.social-icons{
+    background-color: white;
+    padding: 5px;
+}

@@ -1,0 +1,277 @@
+<body class="page-preset">
+    <div class="container" *ngFor="let recipedetail of RecipeDetails">
+
+        
+
+        <!-- Titulo de la receta-->
+        <div class="container-fluid recipe-title">
+            <div class="row">
+                <div class="col recipe-title">
+                    <h1>{{recipedetail.name}} - {{recipedetail.type}}</h1>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border border-dark border-1 opacity-50">
+
+        <!-- Valoración de la receta-->
+        <div class="row mx-auto">
+            <div class="col"> 
+                <span class="material-symbols-outlined not-fill" id="first-star">star</span>
+                <span class="material-symbols-outlined not-fill" id="second-star">star</span>
+                <span class="material-symbols-outlined not-fill" id="third-star">star</span>
+                <span class="material-symbols-outlined not-fill" id="fourth-star">star</span>
+                <span class="material-symbols-outlined not-fill" id="fifth-star">star</span>
+            </div>
+        </div>
+
+        <!-- Información de la receta -->
+        <div class="row">
+
+            <!-- Card de la receta (similar al menu de home) -->
+            <div class="col-xs-12 col-md-6 col-xl-5 order-first ">
+                <div class="container-fluid text-center card-recipe-style">
+                    <div class="row" >
+                      <div class="col">
+                        <div class="container">
+                          <img src="assets/img/{{recipedetail.img}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="border border-dark border-1 opacity-50">
+
+                    <div class="row" >
+                      <div class="col">
+                        <h2>{{recipedetail.name}}</h2> 
+                      </div>
+                    </div>
+                
+                    <div class="row justify-content-center">
+                        <div class="col-3 icon-recipe"> 
+                            <span class="material-symbols-outlined fill" data-bs-toggle="tooltip2" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Tiempo de preparación">
+                            timer
+                            </span>
+                            <h5>{{recipedetail.time}}'</h5>
+                        </div>  
+                        
+                      <div class="col-3 icon-recipe">
+                        <span class="material-symbols-outlined fill" data-bs-toggle="tooltip2" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Monto aproximado">
+                          attach_money
+                        </span>
+                        <h5>{{recipedetail.value}}</h5>
+                      </div>
+
+                      
+
+                      <div class="col-3 icon-recipe">
+                        <span class="material-symbols-outlined fill"  data-bs-toggle="tooltip2" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Porciones">
+                          person
+                        </span>
+                        <h5>{{recipedetail.portion}}</h5>
+                      </div>
+
+                      <div class="col-3 icon-recipe">
+                        <span class="material-symbols-outlined fill" data-bs-toggle="tooltip2" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Dificultad">
+                          warning
+                        </span>
+                        <h5>{{recipedetail.difficulty}}</h5>
+                      </div>
+
+                    </div>
+                      
+                
+                </div>
+            </div>
+            
+            <!-- Ingredientes de la receta-->
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Ingredientes</th>
+                    </tr>
+                    </thead>
+                    <tbody class="">
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[0]}}</th>
+                            <td>{{recipedetail.ingredients[1]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[2]}}</th>
+                            <td>{{recipedetail.ingredients[3]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[4]}}</th>
+                            <td>{{recipedetail.ingredients[5]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[6]}}</th>
+                            <td>{{recipedetail.ingredients[7]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[8]}}</th>
+                            <td>{{recipedetail.ingredients[9]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[10]}}</th>
+                            <td>{{recipedetail.ingredients[11]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[12]}}</th>
+                            <td>{{recipedetail.ingredients[13]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[14]}}</th>
+                            <td>{{recipedetail.ingredients[15]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Utencilios de la receta -->
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Utensilios</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[0]}}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[1]}}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[2]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col description-style">
+                <h4>Descripción</h4>
+                <h5>{{recipedetail.description}}</h5>
+                
+            </div>
+
+            <div class="col description-style">
+                <h4>Tabla Nutricional</h4>
+                <h5>Calorías: {{recipedetail.calories}}</h5>
+            </div>
+        </div>
+        <hr class="border border-dark border-1 opacity-50">
+
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container">
+                        <img src="assets/img/{{recipedetail.imgsteps[0]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 1:</h3>
+                        <h4>{{recipedetail.steps[0]}}</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 2:</h3>
+                        <h4>{{recipedetail.steps[1]}}</h4>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container step-img">
+                        <img src="assets/img/{{recipedetail.imgsteps[1]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container">
+                        <img src="assets/img/{{recipedetail.imgsteps[2]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 3:</h3>
+                        <h4>{{recipedetail.steps[2]}}</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 4:</h3>
+                        <h4>{{recipedetail.steps[3]}}</h4>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container">
+                        <img src="assets/img/{{recipedetail.imgsteps[3]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container">
+                        <img src="assets/img/{{recipedetail.imgsteps[4]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 5:</h3>
+                        <h4>{{recipedetail.steps[4]}}</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid step-card">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-xl-7">
+                    <div>
+                        <h3>Paso 6:</h3>
+                        <h4>{{recipedetail.steps[5]}}</h4>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-md-6 col-xl-5">
+                    <div class="container">
+                        <img src="assets/img/{{recipedetail.imgsteps[5]}}" width="100%" height="auto" class="img-fluid" alt="{{recipedetail.name}}">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+</body>

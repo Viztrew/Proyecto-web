@@ -1,0 +1,28 @@
+[
+
+    {
+        "id":"1",
+        "name":"Filete con Verduras",
+        "img":"filete.jpg",
+        "rating":"4",
+        "portion":"2",
+        "value":"10.000",
+        "time":"45",
+        "calories":"500",
+        "difficulty":"Media",
+        "type":"Plato Principal",
+        "description":"Filete asado con verduras variadas",
+        "ingredients":["1","Filete","3","Espárragos", "2","Tomate","2","Diente de ajo","2","Rama de romero", "1","Cucharada de Sal","1","Pimienta" ,"50ml","Aceite"],
+        "utensil":["Sartén", "Cuchillo afilado","Horno"],
+        "steps":["Sazonar carne con sal y pimienta. Pelar tomates y limpiar espárragos.", 
+                "Calentar una sartén y colocar una una cucharada de aceite. Picar los dientes de ajo en cubos medianos y agregar a la sarten.",
+                "Sellar carne en la sartén unos 5 minutos por lado y colocar romero encima de esta. Pasado los 10 minutos, retirar de la sartén.",
+                "Llevar la carne al horno precalentado a 180°c y dejar al menos 20 minutos.",
+                "En la misma sartén saltear esparragos y tomates al gusto.",
+                "Sacar carne del horno y servir con las verduras."],
+        "imgsteps":["paso1.jpg","paso2.jpg","paso3.jpg","paso4.jpg","paso5.jpg","filete.jpg"],
+        "video":"http://youtube",
+        "url":"filete-con-verduras"
+
+    }
+]

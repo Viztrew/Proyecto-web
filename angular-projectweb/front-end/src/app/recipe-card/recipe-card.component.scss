@@ -1,0 +1,73 @@
+@import "src/styles.scss";
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+.card-style{
+  margin-bottom: 20px;
+  padding-top: 25px;
+  background: linear-gradient(to bottom,  $card-color-top, $card-color-bottom);
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+ // estilos del overlay de las recetas
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: $nav-color;
+  }
+  
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .favorite-overlay {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .arrow-overlay {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .text-overlay {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  .icon-recipe{
+    text-align: right; 
+  }
+  .number{
+    text-align: left;
+  }
+
+ 
