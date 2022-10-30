@@ -19,5 +19,7 @@ Cambios:
 	El menú hamburguesa ahora despliega las opciones del navbar cuando la ventana es demasiado pequeña.
 
 Json:
+
 	Se agrega información e imágenes de recetas en la página principal mediante un json (recipes.json).
-	Se agrega información, imágenes, pasos a seguir, entre otros, de una receta "Filete con Verduras" mediante un json (detail-recipe.json)
+	
+	Se agrega información, imágenes, pasos a seguir, entre otros, de una receta "Filete con Verduras" mediante un json (detail-recipe.json).
