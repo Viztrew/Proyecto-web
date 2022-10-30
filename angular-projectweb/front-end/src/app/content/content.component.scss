@@ -13,13 +13,35 @@ $card-padding : 30px;
     background: linear-gradient(to bottom,  $card-color-top, $card-color-bottom);
 }
 
-.step-card{
+.step-card-right{
     background: linear-gradient(to right, $color-terciary, $card-color-bottom);
     margin-bottom: 30px;
     padding-top: $card-padding ;
     padding-bottom: $card-padding ;
 }
 
+.step-card-left{
+    background: linear-gradient(to left, $color-terciary, $card-color-bottom);
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+}
+
+.video-card{
+    background-color: $color-terciary;
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+}
 .description-style{
     padding-left: 35px;
+}
+
+.rating-card{
+    width: 450px;
+    background: linear-gradient(to top,  $card-color-top, $card-color-bottom);
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+    
 }
