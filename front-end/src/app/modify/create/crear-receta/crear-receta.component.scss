@@ -1,0 +1,73 @@
+@import "src/styles.scss";
+
+$card-padding : 30px;
+.body-receta{
+    background-color: $color-quinary ;
+}
+
+// Estilo estrellas valoracion
+.receta-valoracion{
+    color: rgb(255, 251, 0);
+    padding-bottom: 10px;
+    .estrella{
+      font-size: 50px;
+    }
+    
+}
+//estilo boton editar
+.btn-edit{
+    all: unset;
+    cursor: pointer;
+    .edit{
+        font-size: 30px;
+    }
+    .material-symbols-outlined:hover{
+        color: green;
+    }
+}
+// estilo boton cargar imagen
+.image-upload{
+    all:unset;
+    cursor: pointer;
+}
+
+
+// estilo iconos
+.material-symbols-outlined {
+    font-size: 40px;
+}
+
+.recipe-title{
+    padding-top: 10px ;
+    display: flex;
+}
+
+.card-recipe-style{
+    margin-bottom: 20px;
+    padding-top: 25px;
+    background: $card-color;
+}
+
+.step-card-style{
+    background: $card-color-2;
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+}
+
+.video-card{
+    background-color: $color-terciary;
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+}
+.description-style{
+    padding-left: 35px;
+}
+.rating-card{
+    width: 450px;
+    background: $card-color;
+    margin-bottom: 30px;
+    padding-top: $card-padding ;
+    padding-bottom: $card-padding ;
+}

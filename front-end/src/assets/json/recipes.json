@@ -1,0 +1,106 @@
+[
+    {
+        "id":"1",
+        "name":"Filete con Verduras",
+        "img":"filete.jpg",
+        "rating":"4",
+        "portion":"2",
+        "value":"10.000",
+        "time":"45",
+        "description":"Filete asado con verduras variadas",
+        "url":"filete-con-verduras"
+    },
+    {
+        "id":"2",
+        "name":"Hamburguesa Vegana",
+        "img":"hamburguesa.jpg",
+        "rating":"4",
+        "portion":"1",
+        "value":"2.500",
+        "time":"15",
+        "description":"Hamburguesa con carne de soya",
+        "url":"hamburguesa-vegana"
+    },
+
+    {
+        "id":"3",
+        "name":"Panqueques",
+        "img":"panqueques.jpg",
+        "rating":"5",
+        "portion":"3",
+        "value":"3.000",
+        "time":"10",
+        "description":"Panqueques con crema y frutilla",
+        "url":"panqueques-frutilla"
+    },
+
+    {
+        "id":"4",
+        "name":"Pizza Napolitana",
+        "img":"pizza.jpg",
+        "rating":"4",
+        "portion":"4",
+        "value":"6.000",
+        "time":"30",
+        "description":"Pizza napolitana para 4 personas",
+        "url":"pizza-napolitana"
+    },
+
+    {
+        "id":"5",
+        "name":"Ensalada de Higo y Queso",
+        "img":"ensalada.jpg",
+        "rating":"4",
+        "portion":"2",
+        "value":"4.000",
+        "time":"15",
+        "description":"Ensalada de higo, queso, lechuga y tomate",
+        "url":"ensalada-de-higo-queso"
+    },
+
+    {
+        "id":"6",
+        "name":"Magdalenas de Frutilla",
+        "img":"postre.jpg",
+        "rating":"3",
+        "portion":"4",
+        "value":"2.000",
+        "time":"45",
+        "description":"Postre de magdalenas con frutilla",
+        "url":"magdalenas-de-frutilla"
+    },
+
+    {
+        "id":"7",
+        "name":"Tacos de Pollo",
+        "img":"tacos.jpg",
+        "rating":"4",
+        "portion":"2",
+        "value":"10.000",
+        "time":"45",
+        "description":"Tacos con pollo salteado con verduras",
+        "url":"tacos-de-pollo"
+    },
+    {
+        "id":"8",
+        "name":"Salmón con Ensalada",
+        "img":"salmon.jpg",
+        "rating":"5",
+        "portion":"1",
+        "value":"4.500",
+        "time":"25",
+        "description":"Salmón a la sartén con ensalada",
+        "url":"salmon-con-ensalada"
+    },
+    {
+        "id":"9",
+        "name":"Galletas de Chocolate",
+        "img":"galletas.jpg",
+        "rating":"3",
+        "portion":"5",
+        "value":"3.000",
+        "time":"45",
+        "description":"Galletas de chocolate con trozos de nueces",
+        "url":"galletas-de-chocolate"
+    }
+]

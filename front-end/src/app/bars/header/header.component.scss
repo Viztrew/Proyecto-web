@@ -1,0 +1,37 @@
+@import "src/styles.scss";
+header{
+    background-color: $header-color;
+    
+    h1{
+        text-align: center;
+        text-decoration: none;
+    }
+    button{
+        float: right;
+        justify-content: center;
+        margin: 3px;
+    }
+}
+
+.navbar{
+    background-color: $nav-color;
+    position: sticky;
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.hamburger-icon{
+    color:#fff; 
+    font-size:28px; 
+    border-color: #fff;
+}
+

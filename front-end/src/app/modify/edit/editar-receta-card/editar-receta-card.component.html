@@ -1,0 +1,98 @@
+
+<!-- Impresion de las recetas en página principal mediante un json-->
+<div class="container-fluid text-center card-style rounded-2 fondo">
+    <div class="row" >
+      <div class="col">
+        <div class="container">
+          <img src="{{receta.imagen}}" width="100%" height="auto" class="img-fluid" alt="{{receta.nombre}}">
+          
+          <!-- overlay de la receta (al pasar el mouse)-->
+          <div class="overlay rounded-2">
+            <button class="delete-btn" (click)="eliminarReceta(receta)">
+                <span class="material-symbols-outlined not-fill delete-overlay" ngbTooltip="Eliminar Receta" placement="top">delete</span>
+            </button>
+            
+            <a [routerLink]="['/editar',receta.url]" class="icon">
+              <span class="material-symbols-outlined arrow-overlay">
+                edit
+              </span>
+              <span class="text-overlay"><h6>Editar Receta</h6></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col card-valoracion"> 
+        <a ngbTooltip="Valoración" placement="top">
+          <span class="material-symbols-outlined estrella" [ngClass]="{'fill':valoracion>=1}">star</span>
+          <span class="material-symbols-outlined estrella" [ngClass]="{'fill':valoracion>=2}">star</span>
+          <span class="material-symbols-outlined estrella" [ngClass]="{'fill':valoracion>=3}">star</span>
+          <span class="material-symbols-outlined estrella" [ngClass]="{'fill':valoracion>=4}">star</span>
+          <span class="material-symbols-outlined estrella" [ngClass]="{'fill':valoracion>=5}">star</span>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border border-1 opacity-50">
+    
+    <div class="row" >
+      <div class="col">
+        <h3>{{receta.nombre}}</h3> 
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-1 icon-recipe"> 
+        <span class="material-symbols-outlined fill" ngbTooltip="Tiempo de preparación" placement="top">
+          timer
+        </span>
+      </div>
+
+      <div class="col-2 number">
+        <h5>{{receta.tiempo}}'</h5>
+      </div>
+          
+      <div class="col-1 icon-recipe">
+        <span class="material-symbols-outlined fill" ngbTooltip="Monto aproximado" placement="top">
+          attach_money
+        </span>
+      </div>
+
+      <div class="col-2 number">
+          <h5>{{receta.valor}}</h5>
+      </div>
+      
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-1 icon-recipe"> 
+        
+          
+      <span class="material-symbols-outlined fill"  ngbTooltip="Porciones" placement="top">
+        person
+      </span>
+    </div>
+
+    <div class="col-2 number">
+        <h5>{{receta.porcion}}</h5>
+    </div>
+      <div class="col-1 icon-recipe">
+        <span class="material-symbols-outlined fill"  ngbTooltip="Dificultad" placement="top">
+          warning
+        </span>
+      </div>
+
+      <div class="col-2 number">
+        <h5>{{receta.dificultad}}</h5>
+      </div>
+      
+    </div>
+    
+    <div class="row" >
+      <div class="col">
+        <h5>{{receta.descripcion}}</h5>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<hr class="border border-dark border-1 opacity-50">
+      <div class="title titulo-pag">
+        <h1>Editar Recetas</h1>
+      </div>
+      <hr class="border border-dark border-1 opacity-50">
+
+      <!-- Card de recetas desde json -->
+      <div class="container">
+        <div class="row" id="ads">
+            <div class="col-xs-6 col-md-6 col-xl-4" *ngFor="let receta of Recetas">
+              <app-editar-receta-card [receta]="receta" (sendReceta)="eliminarReceta($event)"></app-editar-receta-card>
+          </div>
+        </div> 
+      </div> 

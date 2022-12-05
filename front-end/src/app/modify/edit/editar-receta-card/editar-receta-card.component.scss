@@ -1,0 +1,86 @@
+@import "src/styles.scss";
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+.card-style{
+  margin-bottom: 20px;
+  padding-top: 25px;
+  background: $card-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0,0,0,.3) 0 5px 10px;
+}
+ // estilos del overlay de las recetas
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: $color-quinary;
+  }
+  
+  
+  .container:hover .overlay {
+    opacity: 0.8;
+  }
+  
+  .delete-overlay {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .arrow-overlay {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .text-overlay {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+.icon-recipe{
+  text-align: right; 
+}
+.number{
+  text-align: left;
+}
+
+// Estilo estrellas valoracion
+.card-valoracion{
+  color: rgb(255, 251, 0);
+  padding-bottom: 15px;
+  margin-bottom: -35px;
+  .estrella{
+    font-size: 35px;
+  }
+}
+
+.delete-btn{
+    all:unset;
+    cursor: pointer;
+}

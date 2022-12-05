@@ -1,0 +1,193 @@
+<body class="body">
+    <div class="container body-receta" >
+        
+        <!-- Titulo de la receta -->
+        <div class="container-fluid recipe-title titulo-pag">
+            <div class="row">
+                <div class="col recipe-title">
+                    <h1 list="datalistOptions">{{PlaceHolders.nombre}} - {{PlaceHolders.tipo_receta}}</h1>
+                    <button class="btn-edit" (click)="editarTipo()" ngbTooltip="Editar Tipo" placement="top" >
+                        <span class="material-symbols-outlined edit">edit</span>
+                    </button>
+                </div>
+                <div class="col col-auto">
+                    <button class="btn btn-success" (click)="postReceta()">Crear Receta</button>
+                </div>
+            </div>
+                
+        </div>
+
+        <hr class="border border-1 opacity-50">
+         <!-- Valoración de la receta -->
+         <div class="row">
+            <div class="col receta-valoracion"> 
+                <a ngbTooltip="Valoración" placement="bottom">
+                    <span class="material-symbols-outlined estrella">star</span>
+                    <span class="material-symbols-outlined estrella">star</span>
+                    <span class="material-symbols-outlined estrella">star</span>
+                    <span class="material-symbols-outlined estrella">star</span>
+                    <span class="material-symbols-outlined estrella">star</span>
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Información de la receta -->
+        <div class="row">
+
+            <!-- Card de la receta (similar al menu de home)  -->
+            <div class="col-xs-12 col-md-6 col-xl-5 order-first ">
+                <div class="container-fluid text-center card-recipe-style rounded-2">
+                    <div class="row" >
+                      <div class="col">
+                        <div class="container">
+                            <img src="{{PlaceHolders.imagen}}" width="100%" height="auto" class="img-fluid" alt="{{PlaceHolders.nombre}}">
+                            <input class="form-control form-control-sm" type="file" accept="image/*"(change)="onselect($event)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="border border-1 opacity-50">
+
+                    <div class="row" >
+                      <div class="col">
+                        <h2>{{PlaceHolders.nombre}}
+                            <button class="btn-edit" (click)="editarTitulo()" ngbTooltip="Editar Nombre" placement="top" >
+                                <span class="material-symbols-outlined edit">edit</span>
+                            </button>
+                        </h2> 
+                        
+                      </div>
+                    </div>
+                
+                    <div class="row justify-content-center">
+                        <div class="col-3 icon-recipe"> 
+                            <button class="btn-edit" (click)="editarTiempo()" ngbTooltip="Editar Tiempo" placement="top">
+                                <span class="material-symbols-outlined fill tiempo" >timer</span>
+                                <h5>{{PlaceHolders.tiempo}}'</h5>
+                            </button>
+                            
+                        </div>  
+                        
+                        <div class="col-3 icon-recipe">
+                            <button class="btn-edit" (click)="editarValor()" ngbTooltip="Editar Monto" placement="top">
+                                <span class="material-symbols-outlined fill valor" >attach_money</span>
+                                <h5>{{PlaceHolders.valor}}</h5>
+                            </button>
+                        </div>
+
+                        <div class="col-3 icon-recipe">
+                            <button class="btn-edit" (click)="editarPorcion()" ngbTooltip="Editar Porciones" placement="top">
+                                <span class="material-symbols-outlined fill" >person</span>
+                                <h5>{{PlaceHolders.porcion}}</h5>
+                            </button>
+                            
+                        </div>
+
+                        <div class="col-3 icon-recipe">
+                            <button class="btn-edit" (click)="editarDificultad()" ngbTooltip="Editar Dificultad" placement="top">
+                                <span class="material-symbols-outlined fill" > warning </span>
+                                <h5>{{PlaceHolders.dificultad}}</h5>
+                            </button>
+                            
+                        </div>
+
+                    </div>
+                      
+                
+                </div>
+            </div>
+            
+            <!-- Ingredientes de la receta 
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Ingredientes</th>
+                    </tr>
+                    </thead>
+                    <tbody class="">
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[0]}}</th>
+                            <td>{{recipedetail.ingredients[1]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[2]}}</th>
+                            <td>{{recipedetail.ingredients[3]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[4]}}</th>
+                            <td>{{recipedetail.ingredients[5]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[6]}}</th>
+                            <td>{{recipedetail.ingredients[7]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[8]}}</th>
+                            <td>{{recipedetail.ingredients[9]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[10]}}</th>
+                            <td>{{recipedetail.ingredients[11]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[12]}}</th>
+                            <td>{{recipedetail.ingredients[13]}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{{recipedetail.ingredients[14]}}</th>
+                            <td>{{recipedetail.ingredients[15]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Utencilios de la receta  
+            <div class="col">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Utensilios</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[0]}}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[1]}}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">{{recipedetail.utensil[2]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        -->
+        </div>
+    
+        <div class="row ">
+            <div class="col description-style">
+                <h4>Descripción
+                    <button class="btn-edit" (click)="editarDescripcion()" >
+                        <span class="material-symbols-outlined edit">edit</span>
+                    </button>
+                </h4>
+                <h5>{{PlaceHolders.descripcion}}</h5>
+
+            </div>
+
+            <div class="col description-style">
+                <h4>Tabla Nutricional
+                    <button class="btn-edit" (click)="editarCalorias()" >
+                        <span class="material-symbols-outlined edit">edit</span>
+                    </button>
+                </h4>
+                <h5>Calorías: {{PlaceHolders.calorias}} </h5>
+            </div>
+        </div>
+        
+    </div>
+</body>

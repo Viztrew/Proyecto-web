@@ -1,0 +1,149 @@
+
+
+/* fonts */
+$global-font: Helvetica, sans-serif;
+
+
+// Colores del proyecto
+$color-primary :#94571D;
+$color-secondary : #5C2710;
+$color-terciary : #FFF3C9;
+$color-quaternary : #B88B21;
+$color-quinary : #656C12;
+
+$header-color: $color-primary;
+$footer-color:  $color-secondary;
+$nav-color: #8E4F28;
+$bg-color: #ffff;
+$btn-color: rgb(14, 11, 15);
+$items-color: $color-quinary ;
+$card-color: $color-primary;
+$card-color-2: #484C0D;
+$carrousel-color: #656c125d;
+
+
+
+// Importar color a boostrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$theme-colors: (
+  primary: $purple
+);
+
+// personalizacion de botones header y nav
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-primary:visited{
+  background-color: $color-quaternary;
+  border-color: white;
+  color: white;
+}
+
+// personalizacion de botones carrusel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 70px;
+  width: 70px;
+  outline: rgb(255, 255, 255);
+  background-size: 10px, 10px;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: $color-quinary ;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: $color-quinary ;
+}
+
+/*------ Configuración de iconos------- */
+// google icons
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+
+// font awesome
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.material-symbols-outlined {
+  font-size: 25px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 48
+}
+.fill{
+  size: 50px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 48
+  
+}
+
+.not-fill{
+ 
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+
+// logo
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/*-------------------------------------*/
+
+.text-white{
+  font-family: $global-font;
+  color: white;
+}
+
+.text-global{
+  font-family: $global-font;
+}
+.body{
+  font-family: $global-font;
+  background-color: $bg-color;
+  color: rgb(255, 255, 255);
+}
+.margin{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.recipe-img{
+  width: 300px;
+  height: 300px;
+}
+
+.title{
+  text-align: center;
+  padding: 32px;
+}
+/* Importing Bootstrap SCSS file. 
+@import '~bootstrap/scss/bootstrap';*/
+
+.deco-none{
+  text-decoration: none;
+}
+
+.titulo-pag{
+  background-color: $color-quinary;
+}

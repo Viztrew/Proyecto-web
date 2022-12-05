@@ -1,0 +1,9 @@
+@import "src/styles.scss";
+.card-style{
+    margin-bottom: 20px;
+    padding-top: 25px;
+    background: $card-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0,0,0,.3) 0 5px 10px;
+  }

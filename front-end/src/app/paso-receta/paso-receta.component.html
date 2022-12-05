@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-xl-5 hide" [ngClass]="{'hide':pasoreceta.id_paso%2==0}">
+        <div class="container">
+            <img src="assets/img/{{pasoreceta.imagen}}" width="100%" height="auto" class="img-fluid" alt="{{pasoreceta.paso}}">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-xl-7">
+        <div>
+            <h3>Paso {{pasoreceta.id_paso}}:</h3>
+            <h4>{{pasoreceta.paso}}</h4>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-xl-5 hide" [ngClass]="{'hide':pasoreceta.id_paso%2!=0}">
+        <div class="container">
+            <img src="assets/img/{{pasoreceta.imagen}}" width="100%" height="auto" class="img-fluid" alt="{{pasoreceta.paso}}">
+        </div>
+    </div>
+</div>

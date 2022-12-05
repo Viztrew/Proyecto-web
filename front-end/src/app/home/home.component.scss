@@ -1,0 +1,14 @@
+@import "src/styles.scss";
+
+.carrousel-style{
+    max-width:1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $card-color;
+    padding: 1px;
+}
+
+.carrousel-text-color{
+    background-color: $carrousel-color;
+}
